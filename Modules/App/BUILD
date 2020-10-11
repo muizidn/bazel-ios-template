@@ -41,8 +41,7 @@ swift_library(
         "**/*.xcassets/**",
         "**/*.plist",
         "**/*.lproj/**",
-        "**/*.ttf"
-    ]),
+    ]) + ["//Fonts"],
     deps = [
         "//Rome:GONMarkupParser",
         "//Rome:Keys",

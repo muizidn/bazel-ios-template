@@ -7,6 +7,14 @@
 //
 
 import UIKit
+// MARK: Transitive Dependencies
+// I don't know how to explicitly declare in BUILD file yet
+/*
+Required by MLKit
+CoreMedia, Accelerate
+*/
+import CoreMedia
+import Accelerate
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

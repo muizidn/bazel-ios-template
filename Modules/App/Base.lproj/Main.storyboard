@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gz-vp-okv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-BoldItalic.ttf">
+            <string>Roboto-BoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PJ6-6T-ZB0">
+            <objects>
+                <navigationController id="2gz-vp-okv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9PV-Oj-pih">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VnN-9b-IWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFg-NJ-uCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="95"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8cV-mj-gPc">
+                                <rect key="frame" x="10" y="98" width="394" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-mx-t5G">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="32"/>
+                                        <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Launch AVScanner"/>
+                                        <connections>
+                                            <action selector="launchScanner" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mk-w9-GrW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3d-Cn-Atg">
+                                        <rect key="frame" x="0.0" y="42" width="394" height="32"/>
+                                        <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Launch MLKit Scanner"/>
+                                        <connections>
+                                            <segue destination="au8-kK-8Py" kind="show" id="RbT-xa-jcK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gRD-MW-URJ">
+                                <rect key="frame" x="10" y="182" width="394" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="z_sick_green"/>
+                        <constraints>
+                            <constraint firstItem="8cV-mj-gPc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aio-fX-eYv"/>
+                            <constraint firstItem="gRD-MW-URJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gJG-KU-Z15"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8cV-mj-gPc" secondAttribute="trailing" constant="10" id="gNP-jS-0zc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gRD-MW-URJ" secondAttribute="bottom" constant="10" id="m1D-Cl-jIw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRD-MW-URJ" secondAttribute="trailing" constant="10" id="ozP-3p-PQw"/>
+                            <constraint firstItem="8cV-mj-gPc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="xSz-rp-uXS"/>
+                            <constraint firstItem="gRD-MW-URJ" firstAttribute="top" secondItem="8cV-mj-gPc" secondAttribute="bottom" constant="10" id="y1I-jM-IcR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Vs-5g-E0T"/>
+                    <connections>
+                        <outlet property="textview" destination="gRD-MW-URJ" id="QbH-h7-BDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="95"/>
+        </scene>
+        <!--MLKit-->
+        <scene sceneID="Eek-tr-8B1">
+            <objects>
+                <viewController id="au8-kK-8Py" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ge0-FE-an6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fLl-gP-Ad9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ydc-UM-Pfe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-l0-0CU" userLabel="Camera View">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6TP-l0-0CU" firstAttribute="leading" secondItem="Ydc-UM-Pfe" secondAttribute="leading" id="0Zi-UA-qws"/>
+                            <constraint firstItem="6TP-l0-0CU" firstAttribute="bottom" secondItem="fLl-gP-Ad9" secondAttribute="top" id="hus-pS-E6H"/>
+                            <constraint firstItem="6TP-l0-0CU" firstAttribute="top" secondItem="Ydc-UM-Pfe" secondAttribute="topMargin" id="m4u-6r-d4M"/>
+                            <constraint firstAttribute="trailing" secondItem="6TP-l0-0CU" secondAttribute="trailing" id="mNZ-YZ-luR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CAW-uk-Dbs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MLKit" id="a1s-Jc-XXZ">
+                        <rightBarButtonItems>
+                            <barButtonItem title="SwitchCam" id="0MR-XU-wiM" userLabel="Switch Camera Button">
+                                <connections>
+                                    <action selector="switchCamera:" destination="au8-kK-8Py" id="Bid-mz-7Wo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Detectors" id="lEg-US-Zj3" userLabel="Detectors Button">
+                                <connections>
+                                    <action selector="selectDetector:" destination="au8-kK-8Py" id="XKi-eE-jy1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraView" destination="6TP-l0-0CU" id="AGj-VU-0dB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ha-up-w1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="z_sick_green">
+            <color red="0.6470000147819519" green="0.80400002002716064" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

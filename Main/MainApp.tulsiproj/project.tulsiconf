@@ -1,0 +1,14 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+      "BazelBuildOptionsDebug" : {
+        "p" : "--apple_generate_dsym --define=environment=develop"
+      }
+    }
+  },
+  "packages" : [
+    "Main"
+  ],
+  "projectName" : "MainiOS",
+  "workspaceRoot" : ".."
+}

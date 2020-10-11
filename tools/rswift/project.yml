@@ -1,0 +1,56 @@
+name: rswift
+options:
+  developmentLanguage: id
+targets:
+  MainApp:
+    type: framework
+    platform: iOS
+    preBuildScripts:
+      - script: '"$SRCROOT/rswift" generate "$SRCROOT/App_R.generated.swift"'
+        name: Generate R.swift
+        inputFiles:
+          - $TEMP_DIR/rswift-lastrun
+        outputFiles:
+          - $SRCROOT/App_R.generated.swift
+    sources:
+      - path: "Sources"
+        includes:
+          - "Info.plist"
+      - path: "../../Main"
+        includes:
+          - "**/*.storyboard"
+          - "**/*.xib"
+          - "**/*.xcassets"
+          - "**/*.strings"
+      - path: "../../Fonts"
+        includes:
+          - "**/*.ttf"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.foo.bar
+      CODE_SIGN_IDENTITY: ""
+  MainBarcodeFW:
+    type: framework
+    platform: iOS
+    preBuildScripts:
+      - script: '"$SRCROOT/rswift" generate "$SRCROOT/Barcode_R.generated.swift"'
+        name: Generate R.swift
+        inputFiles:
+          - $TEMP_DIR/rswift-lastrun
+        outputFiles:
+          - $SRCROOT/Barcode_R.generated.swift
+    sources:
+      - path: "Sources"
+        includes:
+          - "Info.plist"
+      - path: "../../Modules/Barcode"
+        includes:
+          - "**/*.storyboard"
+          - "**/*.xib"
+          - "**/*.xcassets"
+          - "**/*.strings"
+      - path: "../../Fonts"
+        includes:
+          - "**/*.ttf"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.foo.bar
+      CODE_SIGN_IDENTITY: ""

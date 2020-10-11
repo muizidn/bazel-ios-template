@@ -1,0 +1,15 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+      "BazelBuildOptionsDebug" : {
+        "p" : "--define=environment=develop"
+      }
+    }
+  },
+  "packages" : [
+    "Modules/App",
+    "Modules/Barcode"
+  ],
+  "projectName" : "Modules",
+  "workspaceRoot" : "../.."
+}
